@@ -52,7 +52,7 @@
 **Eu quero** que o sistema sinalize visualmente 
 **Para que** o usuario tenha melhor controle das etapas já realizadas.
 
-#### :rocket: Condições adicionar para a tela
+#### :rocket: Condições adicionais para a tela
 
 - Possuir hover nos itens da lista
 - Validações correspondentes aos campos de entrada.
