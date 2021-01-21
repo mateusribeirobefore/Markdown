@@ -5,7 +5,7 @@
 :warning: **Resumo:** As telas fazem parte do fluxo de auditar as vendas e os status da fidelização de todos os planos e aparelhos na gestão documental. 
 
 
-**Caso de uso**: Listagem de todos os tipos de venda de aparelho e/ou serviço da TIM.
+**Caso de uso**: Usuário deseja ver a listagem de todos os tipos de venda de aparelho e/ou serviço da TIM (mesmo as que não são enviadas documentação para a TIM).
 
 **Pré-condição**: Essa tela faz parte do fluxo de gestão documental, onde são realizadas as audições das vendas e dos status da fidelização de planos e aparelhos.
 
