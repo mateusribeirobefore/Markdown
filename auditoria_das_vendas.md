@@ -1,8 +1,8 @@
-# Front-end | Módulo de ______________ - Auditoria das Vendas
+# Front-end | Módulo de Gestão Documental - Auditoria das Vendas
 
 ## Fluxo do processo de Auditoria das Vendas
 
-:warning: **Resumo:** As telas fazem parte do fluxo de auditar as vendas e os status da fidelização de todos os planos e aparelhos na gestão documental. 
+:warning: **Resumo:** As telas fazem parte do fluxo de auditoria das vendas e status da fidelização de todos os planos e aparelhos na gestão documental. 
 
 
 **Caso de uso**: Usuário deseja ver a listagem de todos os tipos de venda de aparelho e/ou serviço da TIM (mesmo as que não são enviadas documentação para a TIM).
@@ -13,58 +13,91 @@
 
 ### :pushpin: Descrição
 
-#### Importar Margens
-
-- Usuário acessa o módulo de importação de margens e seleciona a opção de importar.
+- O Usuário acessa a listagem, para que possa realizar a auditoria de todos os tipos de venda de aparelho e/ou serviço da TIM (mesmo as que não são enviadas documentação para a TIM) - Troca de chip não será contemplado neste escopo. Porém, se no serviço tiver um novo chip vinculado, o ICCID do chip será retornado nesta consulta.das vendas realizadas.
+- O Usuário seleciona um dos botões de status para realizar a filtragem tanto por status da linha quanto por status de conciliação.
+- O Usuário pode selecionar mais de um status para compor o filtro que deseja.
+- O Usuário pode desselecionar o status clicando novamente no bloco referente ao status.
+- O Sistema deve apresentar uma busca composta de Status + Filtros.
+- 0 Usuário preenche os campos de busca que deseja filtrar
+- 0 Sistema deve apresentar realizar a composição dos filtros, de forma complementar por status e demais campos preenchidos.
+- 0 Usuário pode clicar no botão de ações de cada item da lista.
+- Após o usuário realizar o filtro e selecionar os registros que deseja atualizar, ele poderá selecionar um ou mais destes campos para atualizar de uma vez só.
+- O usuário poderá realizar uma atualização massiva através de importação
+- Cada item listado deverá ter um botão de ações que terá duas opções: Detalhamento da venda (próximo item) e editar a venda. Esta última opção chama a funcionalidade de edição de venda existente. A edição de venda deverá respeitar todas as regras já pré existentes, inclusive de permissão para tal
+- O usuário deverá também ter a possibilidade de editar apenas um registro por vez. Os campos que **podem ser alterados** são: **status da linha, status do serviço, fidelização de plano e fidelização de aparelho, status da conciliação**.
 ---
-##### Passo 1 - Realizar Importação
-- O sistema deve retornar um campo de upload de arquivos e um botão para baixar o modelo de importação.
-- O usuário inicia o processo de importação adicionando um arquivo com a extensão solicitada (extensão do arquivo a validar)
-- No caso do arquivo inserido ter a *extensão diferente* do solicitado pelo sistema, é exibido uma mensagem de feedback ao usuário (Ex: Extensão não permitida)
-- No caso do arquivo inserido ter a extensão solicitada pelo sistema o usuário pode avançar.
-- Usuário clica em avançar.
-- No caso do arquivo inserido ter o formato válido ele será direcionado ao **Passo 2**
-- No caso do arquivo inserido *não ter o formato válido*, é exibido uma mensagem de feedback ao usuário (Ex:Arquivo em formato inválido) e o arquivo no campo é removido. 
+##### Filtros
+- O retorno dos filtros também devem influenciar o totalizador dos indicadores de status coloridos.
+- Os filtros serão: 
+- Status da linha
+- Status da Conciliação
+- Motivo de envio (um ou todos)
+- Número da linha
+- Número da venda
+- CPF/CNPJ
+- Filial (selecionar uma ou todas)
+- Período de venda
+- Vendedor (um ou todos).
 ---
-##### Passo 2 - Dados da Importação
-- O sistema deve retornar as informações referentes aos dados inseridos pelo usuário.
-- Os dados são exibidos ao usuário em forma de tabelas com rolagem vertical dependendo da quantidade de dados.
-- Os botões de "voltar" ao **Passo 1** e "salvar importação" ficam disponíveis ao usuário.
-- Usuário pressiona botão "salvar importação" ele será direcionado ao **Passo 3**
+##### Dados que podem ser atualizados em lote são:
+- Status da linha
+- Status do serviço
+- Fidelização de plano
+- Fidelização de aparelho
+- Status de conciliação
+
 ---
-##### Passo 3 - Concluído
-- O Sistema retorna as informações de margens em forma de tabela e retorna o arquivo importado
-- O botão "voltar" ao **Passo 2** fica disponível ao usuário
-- No caso o usuário não clicar no botão "voltar" é exibido uma mensagem de feedback com a mensagem de sucesso e então o usuário é redirecionado a listagem
+##### Importação massiva :
+- O usuário poderá realizar uma atualização massiva através de importação
+- O mesmo relatório que é exportado nesta funcionalidade servirá de modelo para a importação das informações que podem ser atualizadas na base.
 
+---
+##### Os status de conciliação:
+- Pendente de análise
+- Em análise
+- Conciliado
+- Não conciliado
 
-#### Jobs Stories
+---
+##### Exportação:
+- Deverá estar disponível a exportação do resultado da pesquisa.
+- Os campos retornados devem ser todos os especificados abaixo:
+- Filial
+- Data da venda
+- Número da linha
+- Vendedor
+- Tipo de produto (ex.: Serviço, Chip, Aparelho) - todas as classificações do mapa de vendas
+- Tipo de serviço (ex.: Ativação, Migração, Upgrade, Troca de aparelho, Troca de Simcard, Venda avulsa de aparelho) - todas as classificações do mapa de vendas
+- Status da linha - Pode ser alterado
+- Status do serviço - pode ser alterado- Status da documentação
+- Fidelização plano - Pode ser alterado
+- Fidelização aparelho  - Pode ser alterado
+- IMEI
+- ICCID
+- Plano contratado
+- CPF do cliente
+- Nome do cliente
+- Status da conciliação (pode ser alterado)
+- Motivo de envio
+- Número da venda
+- Valor do desconto da operadora
+- Observação
 
-**Quando** o usuário inserir um arquivo vazio
-**Eu quero** que o sistema exiba uma mensagem de feedback
-**Para que** ele possa selecionar um arquivo.
-
-**Quando** o usuário inserir um arquivo de extensão inválida ou formato inválido
-**Eu quero** que o sistema exiba uma mensagem de feedback
-**Para que** ele possa selecionar um novo arquivo correspondente ao que o sistema está solicitando.
-
-**Quando** o usuário for concluindo as etapas
-**Eu quero** que o sistema sinaliza visualmente 
-**Para que** o usuário tenha melhor controle das etapas já realizadas.
 
 #### :rocket: Condições adicionais para a tela
 
 - Possuir hover nos itens da lista
-- Validações correspondentes aos campos de entrada.
+- Validações correspondentes.
 - Versão mobile deve manter a consistência de espaçamento, deixando os itens em forma de blocos.
+- Quantidade mínima de itens na tela 20 itens.
+- Possuir paginação
+- Menu de ações deve direcionar o usuário para outras partes do sistema referente ao menu clicado.
+- Versão mobile sem scroll lateral, deixando os itens em forma de blocos.
 
 #### Itens adicionais
 
 Adicionar Google Analytics ao módulo, para gerarmos dados/informações de uso e realizarmos acompanhamento de sucesso do mesmo.
 Adicionar captura/tracking de comportamento e eventos do Google Analytics no módulo.
 
-#### :art:  Link do Figma com as telas
-
-[Link do figma](https://www.figma.com/file/bIbPVxbgvhOqqQ3iyn5RK4TN/DV-2482---Criar-menu-de-importa%C3%A7%C3%A3o-de-margens-no-geretim?node-id=81%3A591)
 
 Quaisquer dúvidas, me chame no slack com as dúvidas referentes ao card.
