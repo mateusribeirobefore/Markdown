@@ -6,8 +6,10 @@
 
 :bulb: **Caminho sugestivo:** `Cadastro -> Importação de Valores ->` `Cadastrar nova tabela` | `Ver todos`.
 
-- Usuário acessa o módulo de importação de valores e seleciona a opção de cadastrar nova tabela.
+
 ---
+### :pushpin: Descrição
+- Usuário acessa o módulo de importação de valores e seleciona a opção de cadastrar nova tabela.
 #####  Realizar Importação
 - O sistema deve retornar um campo de upload de arquivos,um campo de data de vigência,um campo do tipo radio com as opções valor de franquia e valor de referência, campos de checkboxes com as UF's,um botão para baixar o modelo de importação e um botão para cadastrar.
 - O usuário inicia o processo de importação adicionando um arquivo com a extensão .csv.
