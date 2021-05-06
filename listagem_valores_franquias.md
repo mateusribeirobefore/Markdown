@@ -22,8 +22,18 @@
 
 #### :rocket: Condições adicionais para a tela
 
-- Validações correspondentes aos campos de entrada.
+- Possuir paginação.
 - Versão mobile deve manter a consistência de espaçamento, deixando os itens em forma de blocos.
+- Condições para adicionar a tela.
+Ao remover uma margem importada um aviso deve ser exibido conforme é mostrado no figma.
+
+
+
+Quantidade mínima de itens na tela 20+ itens.
+
+Possuir hover nos itens da lista.
+
+Versão mobile sem scroll lateral, deixando os itens em forma de blocos.
 
 #### :art:  Link do Figma com as telas
 
