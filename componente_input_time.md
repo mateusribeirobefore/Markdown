@@ -8,6 +8,7 @@ O campo de entrada de hora será utilizado nas telas do fluxo de tranferências,
 #### Itens para o componente
 - Deve exibir o horário corrente como padrão
 - Deve emitir o horario que foi alterado pelo usuario;
+- Deve existir validaçao quando o campo esta com dados incorretos/vazio
 
 #### :art:  Link do Figma com as telas
 
