@@ -14,7 +14,7 @@ O botão será utilizados nas telas do fluxo de tranferências, onde será reali
   - Setar as cores do botão por parâmetro;
   - Deve emitir evento de click ao ser clicado;
 - O botão deverá conter hover
-- O botão deverá ser desativado
+- O botão deverá ter uma versao para desativado
 
 #### Itens adicionais
 Adicionar Google Analitycs ao módulo, para gerarmos dados/informações de uso e realizarmos acompanhamento de sucesso do mesmo.
