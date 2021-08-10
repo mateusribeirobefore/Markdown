@@ -20,7 +20,11 @@
 
 #####  #### Itens para o componente
 - As seguintes opções deverão ser passadas como props no componente pois serão mutáveis.
-- 
+- Receber título por parâmetro.
+- Receber mensagem descritiva por parêmetro.
+- Receber uma condicao para exibir com ou sem icone.
+- Adicionar versão quando para sucesso e erro usando icones.
+- Adicionar condição para 1 ou 2 botoes de ação.
 
 #### :rocket: Condições adicionais para a tela
 
