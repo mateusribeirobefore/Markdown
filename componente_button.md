@@ -1,4 +1,4 @@
-# Front-end | Componenização de botões
+# Front-end | Componentização de botões
 
 ## O novo componente poderá ser reutilizado no processo de novos módulos e refatoração de antigos.Teremos ganhos na reutilização de trechos de código, no isolamento de contexto, na legibilidade do código, e na padronização do projeto.
 
