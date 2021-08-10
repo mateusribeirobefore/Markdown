@@ -1,18 +1,25 @@
 
-## Front-end | Módulo de Importação de valores - Listagem de tabela de franquias
+## Front-end | Componenização de modal
 
-:warning: **Resumo:** As telas fazem parte do fluxo de listagem/importação dos valores de franquia dos planos, esses valores são divididos em 3,para o estado do RJ,SP e demais estados. Os valores são contabilizados pela operadora de forma que o parceira atinja a meta estipulada.
+## O novo componente poderá ser reutilizado no processo de novos módulos e refatoração de antigos.Teremos ganhos na reutilização de trechos de código, no isolamento de contexto, na legibilidade do código, e na padronização do projeto.
 
-:warning: **Proposta:** Após o usuário ter importado a tabela com sucesso ele é redirecionado para a tela de listagem, ou quando o usuario precisa consultar a lista de tabelas importadas. 
 
-:bulb: **Caminho sugestivo:** `Cadastro -> Importação de Valores ->` `Cadastrar nova tabela` | `Ver todos`.
+:warning: **Resumo:** Esse modal faz parte do fluxo de transferencia, onde são realizadas os cadastros e listagem de transferencia.
+
+**Pré-condição:** Atualmente contemplará apenas o módulo de transferencia.
 
 
 ---
 ### :pushpin: Descrição
-- Usuário acessa o módulo de importação de valores e seleciona a opção de ver todos ou após realizar um cadastro de tabela ele é redirecionado para a listagem.
-#####  Tela de Listagem
-- Usuário acessa a listagem de tabela de franquias, para consultar as informações sobre tabelas importadas.
+- Sistema apresenta a visualização da mensagem de feedback em forma de modal para o usuario após ser realizada uma transferencia, trazendo a visualização de forma adaptativa ao conteúdo inserido
+- Modal deve ser responsivo.
+- Modal deve apresentar informações como scroll.
+- Usuário deve poder clicar no botão concluir para fechar o modal.
+- Usuário deve poder clicar no botão repetir para voltar a tela onde estava.
+
+
+#####  Componente
+- 
 - O sistema deve retornar um campo de busca por nome de usuario, por tipo de tabela ou estado.
 - Os dados listados são (Nº, data de vigência, nome do usuario, tipo de tabela, e uma visualização de tabela), ai clicar no campo de ver tabela o usuario é redirecionado para a tela com detalhes sobre a importação da tabela.
 #####  Tela de detalhes das tabelas de importação
